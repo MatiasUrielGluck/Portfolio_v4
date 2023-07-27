@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { ThemeContext } from "./context/ThemeContext";
 import { loadTheme } from "./helpers";
-import { Sidebar } from "./components";
+import { Content, Sidebar } from "./components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ export const App = () => {
           <FontAwesomeIcon icon={faBars} onClick={() => setSidebarOpen(true)} />
         </div>
         <Sidebar open={sidebarOpen} closeFn={() => setSidebarOpen(false)} />
-        
+        <Content />
       </AppContainer>
     </ThemeContext.Provider>
   );
@@ -26,6 +26,12 @@ export const App = () => {
 const AppContainer = styled.div`
   height: 100vh;
   background: ${(props) => props.theme.background.primary};
+  transition: all 0.3s ease;
+
+  @media only screen and (width > 768px) {
+    display: flex;
+    flex-flow: row nowrap;
+  }
 
   .btn {
     cursor: pointer;

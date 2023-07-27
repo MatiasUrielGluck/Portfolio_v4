@@ -28,9 +28,11 @@ export const Sidebar = ({ open, closeFn }) => {
 const Container = styled.div`
   display: grid;
   place-items: center;
+
   position: fixed;
   height: 100vh;
   width: 100vw;
+
   background: ${(props) => props.theme.background.accent};
   color: ${(props) => props.theme.text.secondary};
 
@@ -39,8 +41,12 @@ const Container = styled.div`
   transition: all 0.3s ease;
 
   @media only screen and (width > 768px) {
-    width: max-content;
-    padding: 24px;
+    position: relative;
+    height: 100%;
+    max-width: 250px;
+    width: ${(props) => (props.open ? "100%" : "0")};
+    padding: 24px 36px;
+    overflow: hidden;
   }
 
   .btn {
@@ -61,6 +67,7 @@ const Container = styled.div`
     list-style-type: none;
     font-weight: 600;
     font-size: 1.5rem;
+    text-align: center;
     height: 100%;
     display: grid;
     grid-template-columns: 1fr;
