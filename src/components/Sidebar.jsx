@@ -45,7 +45,7 @@ const Container = styled.div`
     height: 100%;
     max-width: 250px;
     width: ${(props) => (props.open ? "100%" : "0")};
-    padding: 24px 36px;
+    padding: ${(props) => (props.open ? "24px 36px" : "0")};
     overflow: hidden;
   }
 
