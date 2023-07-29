@@ -3,21 +3,20 @@ import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 import { InfoContainer } from "../styled-components";
 import { Skill } from "./";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { skillsListFrontend, skillsListBackend } from "../data/skills";
 
 export const Skills = () => {
   const theme = useContext(ThemeContext);
+
   return (
     <Container theme={theme}>
       <div className="skills-container">
         <InfoContainer theme={theme}>
           <h2>Frontend</h2>
           <div className="skills-list">
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
+            {skillsListFrontend.map((skill) => (
+              <Skill key={skill.id} text={skill.text} icon={skill.icon} />
+            ))}
           </div>
         </InfoContainer>
       </div>
@@ -25,11 +24,9 @@ export const Skills = () => {
         <InfoContainer theme={theme}>
           <h2>Backend</h2>
           <div className="skills-list">
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
-            <Skill icon={faReact} text={"React"} />
+            {skillsListBackend.map((skill) => (
+              <Skill key={skill.id} text={skill.text} icon={skill.icon} />
+            ))}
           </div>
         </InfoContainer>
       </div>
@@ -50,7 +47,7 @@ const Container = styled.div`
   .skills-container {
     h2 {
       font-weight: 500;
-      color: ${(props) => props.theme.text.h2};
+      color: ${(props) => props.theme.text.accent};
     }
 
     .skills-list {

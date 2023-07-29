@@ -20,7 +20,7 @@ export const ProfileContainer = () => {
             <h2>Matías Uriel Gluck</h2>
             <p>Full stack web developer</p>
             <a href="mailto:matiasugluck@gmail.com">
-              <FontAwesomeIcon icon={faEnvelope} />
+              <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <span>matiasugluck@gmail.com</span>
             </a>
           </div>
@@ -83,7 +83,7 @@ const Container = styled.div`
 
       h2 {
         font-weight: 600;
-        color: ${(props) => props.theme.text.h2};
+        color: ${(props) => props.theme.text.accent};
       }
 
       a {
@@ -95,6 +95,10 @@ const Container = styled.div`
           text-align: right;
         }
 
+        .icon {
+          color: ${(props) => props.theme.text.accent};
+        }
+
         span {
           margin-left: 4px;
         }
@@ -103,7 +107,7 @@ const Container = styled.div`
       p {
         font-weight: 500;
         font-size: 18px;
-        color: ${(props) => props.theme.text.soft};
+        color: ${(props) => props.theme.text.hard};
       }
 
       @media only screen and (width > 900px) {

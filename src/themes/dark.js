@@ -11,6 +11,8 @@ export const dark = {
     secondary: "#fff",
     h2: "#fff",
     soft: "#a7a7a7",
+    hard: "#d7d7d7",
+    accent: "#fff"
   },
   skill: {
     text: "#a7a7a7",
