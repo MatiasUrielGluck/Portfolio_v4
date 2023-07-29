@@ -86,6 +86,7 @@ const Container = styled.div`
 
       @media only screen and (width > 1200px) {
         width: 70%;
+        margin-top: 0;
       }
 
       .profile--info--desc-container {
@@ -93,6 +94,10 @@ const Container = styled.div`
         grid-template-columns: 1fr;
         row-gap: 12px;
         text-align: center;
+
+        @media only screen and (width > 1200px) {
+            text-align: initial;
+          }
 
         h2 {
           font-weight: 600;
@@ -103,6 +108,10 @@ const Container = styled.div`
           text-decoration: none;
           color: ${(props) => props.theme.text.h2};
           font-weight: 500;
+
+          @media only screen and (width > 1200px) {
+            text-align: right;
+          }
 
           span {
             margin-left: 4px;

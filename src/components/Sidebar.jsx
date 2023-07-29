@@ -74,6 +74,10 @@ const Container = styled.div`
     place-items: center;
     max-height: 700px;
 
+    @media only screen and (width > 768px) {
+      justify-items: left;
+    }
+
     @media only screen and (max-height: 376px) {
       grid-template-columns: 1fr 1fr;
       column-gap: 48px;
