@@ -40,7 +40,7 @@ const Container = styled.div`
     props.open ? "translateX(0%)" : "translateX(-200%)"};
   transition: all 0.3s ease;
 
-  @media only screen and (width > 768px) {
+  @media only screen and (width > 1200px) {
     position: relative;
     height: 100%;
     max-width: 250px;

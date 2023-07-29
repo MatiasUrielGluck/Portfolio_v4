@@ -44,13 +44,13 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media only screen and (width > 1200px) {
+  @media only screen and (width > 900px) {
     flex-flow: row nowrap;
     gap: 24px;
   }
 
   .profile--img-container {
-    @media only screen and (width > 1200px) {
+    @media only screen and (width > 900px) {
       width: 30%;
       display: grid;
       place-items: center;
@@ -66,7 +66,7 @@ const Container = styled.div`
   .profile--info-container {
     margin-top: 12px;
 
-    @media only screen and (width > 1200px) {
+    @media only screen and (width > 900px) {
       width: 70%;
       margin-top: 0;
     }
@@ -77,7 +77,7 @@ const Container = styled.div`
       row-gap: 12px;
       text-align: center;
 
-      @media only screen and (width > 1200px) {
+      @media only screen and (width > 900px) {
         text-align: initial;
       }
 
@@ -91,7 +91,7 @@ const Container = styled.div`
         color: ${(props) => props.theme.text.h2};
         font-weight: 500;
 
-        @media only screen and (width > 1200px) {
+        @media only screen and (width > 900px) {
           text-align: right;
         }
 
@@ -106,7 +106,7 @@ const Container = styled.div`
         color: ${(props) => props.theme.text.soft};
       }
 
-      @media only screen and (width > 1200px) {
+      @media only screen and (width > 900px) {
         grid-template-columns: 1fr 1fr;
 
         p {

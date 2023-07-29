@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { ThemeContext } from "./context/ThemeContext";
-import { loadTheme } from "./helpers";
+import { changeTheme, loadTheme } from "./helpers";
 import { Content, Sidebar } from "./components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faPalette } from "@fortawesome/free-solid-svg-icons";
 
 export const App = () => {
-  const theme = loadTheme();
+  const [theme, setTheme] = useState(loadTheme());
   const [sidebarOpen, setSidebarOpen] = useState(true);
 
   return (
@@ -15,6 +15,14 @@ export const App = () => {
       <AppContainer theme={theme}>
         <div className="btn">
           <FontAwesomeIcon icon={faBars} onClick={() => setSidebarOpen(true)} />
+        </div>
+        <div className="btn">
+          <FontAwesomeIcon
+            icon={faPalette}
+            onClick={() => {
+              setTheme(changeTheme());
+            }}
+          />
         </div>
         <Sidebar open={sidebarOpen} closeFn={() => setSidebarOpen(false)} />
         <Content />
@@ -46,5 +54,9 @@ const AppContainer = styled.div`
     color: ${(props) => props.theme.text.secondary};
     display: grid;
     place-items: center;
+
+    &:nth-child(2) {
+      top: 63px;
+    }
   }
 `;

@@ -12,4 +12,9 @@ export const light = {
     h2: "#4F4F4F",
     soft: "#828282",
   },
+  skill: {
+    text: "#828282",
+    icon: "#000",
+    border: "#000",
+  },
 };
