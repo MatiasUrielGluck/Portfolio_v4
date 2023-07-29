@@ -10,7 +10,7 @@ export const Sidebar = ({ open, closeFn }) => {
   return (
     <Container theme={theme} open={open}>
       <div className="btn">
-        <FontAwesomeIcon icon={faClose} onClick={closeFn} />
+        <FontAwesomeIcon icon={faClose} onClick={closeFn} size="xl" />
       </div>
       <ul>
         <li>About me</li>

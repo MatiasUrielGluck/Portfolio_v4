@@ -12,7 +12,7 @@ export const App = () => {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <AppContainer theme={theme}>
+      <AppContainer theme={theme} $isSidebarOpen={sidebarOpen}>
         <div className="btn">
           <FontAwesomeIcon icon={faBars} onClick={() => setSidebarOpen(true)} />
         </div>
@@ -33,6 +33,7 @@ export const App = () => {
 
 const AppContainer = styled.div`
   height: 100vh;
+  overflow: auto;
   background: ${(props) => props.theme.background.primary};
   transition: all 0.3s ease;
 
@@ -54,9 +55,16 @@ const AppContainer = styled.div`
     color: ${(props) => props.theme.text.secondary};
     display: grid;
     place-items: center;
+    transition: all 0.3s ease;
 
     &:nth-child(2) {
       top: 63px;
+
+      @media only screen and (width > 1200px) {
+        top: ${(props) => (props.$isSidebarOpen ? "12px" : "63px")};
+        left: ${(props) => (props.$isSidebarOpen ? "63px" : "12px")};
+        z-index: 3;
+      }
     }
   }
 `;
