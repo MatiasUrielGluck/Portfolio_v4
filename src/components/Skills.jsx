@@ -12,7 +12,7 @@ export const Skills = () => {
     <Container theme={theme}>
       <div className="skills-container">
         <InfoContainer theme={theme}>
-          <h2>Frontend</h2>
+          <h2>Frontend Skills</h2>
           <div className="skills-list">
             {skillsListFrontend.map((skill) => (
               <Skill key={skill.id} text={skill.text} icon={skill.icon} />
@@ -22,7 +22,7 @@ export const Skills = () => {
       </div>
       <div className="skills-container">
         <InfoContainer theme={theme}>
-          <h2>Backend</h2>
+          <h2>Backend Skills</h2>
           <div className="skills-list">
             {skillsListBackend.map((skill) => (
               <Skill key={skill.id} text={skill.text} icon={skill.icon} />
@@ -48,6 +48,7 @@ const Container = styled.div`
     h2 {
       font-weight: 500;
       color: ${(props) => props.theme.text.accent};
+      text-align: center;
     }
 
     .skills-list {
