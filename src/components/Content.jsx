@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
-import { ProfileContainer, Skills } from "./";
+import { Education, ProfileContainer, Skills } from "./";
 
 export const Content = () => {
   const theme = useContext(ThemeContext);
@@ -11,6 +11,7 @@ export const Content = () => {
     <Container theme={theme}>
       <ProfileContainer />
       <Skills />
+      <Education />
     </Container>
   );
 };

@@ -26,6 +26,7 @@ export const Sidebar = ({ open, closeFn }) => {
 };
 
 const Container = styled.div`
+  z-index: 1;
   display: grid;
   place-items: center;
 
