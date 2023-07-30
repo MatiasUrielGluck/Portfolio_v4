@@ -4,7 +4,8 @@ import { changeTheme, loadTheme } from "./helpers";
 import { Content, Sidebar } from "./components";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faPalette } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import { light } from "./themes";
 
 export const App = () => {
   const [theme, setTheme] = useState(loadTheme());
@@ -13,16 +14,16 @@ export const App = () => {
   return (
     <ThemeContext.Provider value={theme}>
       <AppContainer theme={theme} $isSidebarOpen={sidebarOpen}>
-        <div className="btn">
-          <FontAwesomeIcon icon={faBars} onClick={() => setSidebarOpen(true)} />
+        <div className="btn" onClick={() => setSidebarOpen(true)}>
+          <FontAwesomeIcon icon={faBars} />
         </div>
-        <div className="btn">
-          <FontAwesomeIcon
-            icon={faPalette}
-            onClick={() => {
-              setTheme(changeTheme());
-            }}
-          />
+        <div
+          className="btn"
+          onClick={() => {
+            setTheme(changeTheme());
+          }}
+        >
+          <FontAwesomeIcon icon={theme === light ? faSun : faMoon} />
         </div>
         <Sidebar open={sidebarOpen} closeFn={() => setSidebarOpen(false)} />
         <Content />

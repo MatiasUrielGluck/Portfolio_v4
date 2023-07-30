@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
 export const EducationElement = ({ educationTitle, educationDesc }) => {
-    const theme = useContext(ThemeContext)
+  const theme = useContext(ThemeContext);
   return (
     <Container theme={theme}>
       <p>{educationTitle}</p>
@@ -19,11 +19,11 @@ const Container = styled.div`
   }
 
   p:first-of-type {
-    font-weight: 800;
-    color: ${props => props.theme.text.accent};
+    font-weight: 600;
+    color: ${(props) => props.theme.text.h2};
   }
 
   p:last-of-type {
-    color: ${props => props.theme.text.soft};
+    color: ${(props) => props.theme.text.soft};
   }
 `;

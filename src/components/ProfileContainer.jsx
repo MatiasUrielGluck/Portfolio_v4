@@ -1,4 +1,4 @@
-import profileImage from "../static/images/perfil.jpg";
+import profileImage from "../assets/images/perfil.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";

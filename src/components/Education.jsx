@@ -53,7 +53,7 @@ const Container = styled.div`
       gap: 24px;
       
       span {
-        color: ${props => props.theme.text.accent};
+        color: ${props => props.theme.text.primary};
       }
 
       @media only screen and (width > 975px) {
