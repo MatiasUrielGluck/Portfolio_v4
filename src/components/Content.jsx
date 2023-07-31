@@ -36,7 +36,8 @@ const Container = styled.div`
     gap: 36px;
 
     @media only screen and (width > 920px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
     }
   }
 `;

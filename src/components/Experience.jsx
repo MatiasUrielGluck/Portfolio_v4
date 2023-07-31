@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import { InfoContainer } from "../styled-components";
+import { FullWidthInfoContainer } from "../styled-components";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import abbLogo from "../assets/images/abb.png";
@@ -13,7 +13,7 @@ export const Experience = () => {
 
   return (
     <Container theme={theme}>
-      <InfoContainer theme={theme}>
+      <FullWidthInfoContainer theme={theme}>
         <h2>Experience</h2>
 
         <div className="abb">
@@ -57,7 +57,7 @@ export const Experience = () => {
             <p>Contact me</p>
           </div>
         </a>
-      </InfoContainer>
+      </FullWidthInfoContainer>
     </Container>
   );
 };
@@ -125,7 +125,7 @@ const Container = styled.div`
 
       li {
         color: ${(props) => props.theme.text.primary};
-        padding: 4px 0;
+        padding: 10px 0;
       }
     }
   }
