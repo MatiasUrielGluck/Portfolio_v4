@@ -23,6 +23,7 @@ export const Content = () => {
 const Container = styled.div`
   width: 100%;
   padding: 16px;
+  overflow: auto;
 
   @media only screen and (width > 768px) {
     padding: 12px 5%;

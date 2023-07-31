@@ -19,7 +19,7 @@ export const Sidebar = ({ open, closeFn }) => {
         <li>Experience</li>
         <li>Hobbies</li>
         <li>Portfolio</li>
-        <li>CV & Contact</li>
+        <li>Contact</li>
       </ul>
     </Container>
   );
@@ -46,8 +46,9 @@ const Container = styled.div`
     height: 100%;
     max-width: 250px;
     width: ${(props) => (props.open ? "100%" : "0")};
-    padding: ${(props) => (props.open ? "24px 36px" : "0")};
+    padding: ${(props) => (props.open ? "24px 18px" : "0")};
     overflow: hidden;
+    justify-content: start;
   }
 
   .btn {
@@ -75,7 +76,7 @@ const Container = styled.div`
     place-items: center;
     max-height: 700px;
 
-    @media only screen and (width > 768px) {
+    @media only screen and (width > 1200px) {
       justify-items: left;
     }
 

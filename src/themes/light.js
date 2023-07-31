@@ -12,7 +12,8 @@ export const light = {
     h2: "#4F4F4F",
     soft: "#828282",
     hard: "#000",
-    accent: "#3531FF"
+    accent: "#3531FF",
+    button: "#fff",
   },
   skill: {
     text: "#828282",

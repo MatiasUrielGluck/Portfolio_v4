@@ -12,11 +12,12 @@ export const dark = {
     h2: "#fff",
     soft: "#a7a7a7",
     hard: "#d7d7d7",
-    accent: "#fff"
+    accent: "#fff",
+    button: "#fff",
   },
   skill: {
     text: "#a7a7a7",
     icon: "#fff",
-    border: "#fff"
-  }
+    border: "#fff",
+  },
 };

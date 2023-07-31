@@ -5,6 +5,9 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import { styled } from "styled-components";
 import { InfoContainer } from "../styled-components";
+import { faCircleDown } from "@fortawesome/free-regular-svg-icons";
+
+import cvFile from "../assets/MatiasUrielGluck-CV.pdf";
 
 export const ProfileContainer = () => {
   const theme = useContext(ThemeContext);
@@ -18,11 +21,20 @@ export const ProfileContainer = () => {
         <div className="profile--info-container">
           <div className="profile--info--desc-container">
             <h2>Matías Uriel Gluck</h2>
-            <p>Full stack web developer</p>
+            <p>
+              <span className="coding-decorators">&#60;</span>
+              Full Stack Web Developer
+              <span className="coding-decorators">&#47;&#62;</span>
+            </p>
             <a href="mailto:matiasugluck@gmail.com">
               <FontAwesomeIcon icon={faEnvelope} className="icon" />
               <span>matiasugluck@gmail.com</span>
             </a>
+            <p>
+              <a href={cvFile} download>
+                <FontAwesomeIcon icon={faCircleDown} /> Download CV
+              </a>
+            </p>
           </div>
           <div className="profile--info--large-container">
             <p>
@@ -86,6 +98,32 @@ const Container = styled.div`
         color: ${(props) => props.theme.text.accent};
       }
 
+      .coding-decorators {
+        color: red;
+
+        @keyframes fade {
+          0% {
+            opacity: 100%;
+          }
+          50% {
+            opacity: 0;
+          }
+          100% {
+            opacity: 100%;
+          }
+        }
+
+        animation: fade infinite 2s linear;
+
+        &:first-of-type {
+          padding-right: 4px;
+        }
+
+        &:last-of-type {
+          padding-left: 4px;
+        }
+      }
+
       a {
         text-decoration: none;
         color: ${(props) => props.theme.text.h2};
@@ -108,6 +146,20 @@ const Container = styled.div`
         font-weight: 500;
         font-size: 18px;
         color: ${(props) => props.theme.text.hard};
+
+        &:last-of-type {
+          cursor: pointer;
+          text-align: center;
+
+          a {
+            color: ${(props) => props.theme.text.accent};
+            font-weight: 500;
+          }
+
+          @media only screen and (width > 900px) {
+            text-align: right;
+          }
+        }
       }
 
       @media only screen and (width > 900px) {
