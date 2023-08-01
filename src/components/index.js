@@ -8,3 +8,4 @@ export * from "./EducationElement";
 export * from "./Experience";
 export * from "./Hobbies";
 export * from "./Tags";
+export * from "./Portfolio";

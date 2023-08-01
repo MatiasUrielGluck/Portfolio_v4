@@ -6,6 +6,7 @@ import {
   Education,
   Experience,
   Hobbies,
+  Portfolio,
   ProfileContainer,
   Skills,
   Tags,
@@ -26,6 +27,7 @@ export const Content = () => {
         <Hobbies />
       </div>
       <Tags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
+      <Portfolio />
     </Container>
   );
 };
