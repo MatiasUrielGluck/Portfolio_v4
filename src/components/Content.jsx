@@ -11,11 +11,15 @@ import {
   Skills,
   Tags,
 } from "./";
+import { useProjects } from "../hooks/useProjects";
 
 export const Content = () => {
   const theme = useContext(ThemeContext);
 
   const [selectedTags, setSelectedTags] = useState([]);
+  const [selectedPage, setSelectedPage] = useState(1);
+
+  const { projectsList, numOfPages } = useProjects(selectedTags, selectedPage);
 
   return (
     <Container theme={theme}>
@@ -27,7 +31,9 @@ export const Content = () => {
         <Hobbies />
       </div>
       <Tags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
-      <Portfolio />
+      <Portfolio projectsList={projectsList} />
+      <button onClick={() => setSelectedPage(selectedPage + 1)}>Sig pag</button>
+      <p>{numOfPages}</p>
     </Container>
   );
 };

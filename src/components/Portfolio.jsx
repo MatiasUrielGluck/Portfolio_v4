@@ -1,31 +1,16 @@
 import { useContext } from "react";
 import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
-import { ProjectInfoContainer } from "../styled-components";
+import { ProjectCard } from "./ProjectCard";
 
-export const Portfolio = () => {
+export const Portfolio = ({ projectsList }) => {
   const theme = useContext(ThemeContext);
 
   return (
     <Container theme={theme}>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
-      <ProjectInfoContainer theme={theme}>
-        <h2>Portfolio Project</h2>
-      </ProjectInfoContainer>
+      {projectsList.map((project) => (
+        <ProjectCard key={project.id} project={project} />
+      ))}
     </Container>
   );
 };
@@ -38,7 +23,7 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   gap: 36px;
 
-  @media only screen and (width > 768px) {
+  @media only screen and (width > 670px) {
     grid-template-columns: 1fr 1fr;
   }
 
