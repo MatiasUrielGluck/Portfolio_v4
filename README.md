@@ -1,8 +1,10 @@
-# React + Vite
+# Matías Uriel Gluck Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My Website and Personal Portfolio, 4th version. Developed using React.js.
 
-Currently, two official plugins are available:
+[Link to the production website: -IN DEVELOPMENT PHASE-](https://matiasurielgluck-test.netlify.app/)
+[Link to the preview website: https://matiasurielgluck-preview.netlify.app/](https://matiasurielgluck-preview.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About this new version
+
+Using only frontend technologies to reduce the consumption of resources, placing the information statically.
