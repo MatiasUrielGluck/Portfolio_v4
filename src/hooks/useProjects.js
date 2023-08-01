@@ -2,14 +2,13 @@ import { useEffect, useState } from "react";
 import { getProjects } from "../helpers";
 
 export const useProjects = (tagsList, selectedPage, setSelectedPage) => {
-  const [basicProjectList, setBasicProjectList] = useState(getProjects());
   const [filteredProjectList, setFilteredProjectList] = useState(getProjects());
   const [projectsList, setProjectsList] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
   const [cardsPerPage, setCardsPerPage] = useState();
 
   const filterProjectsByTags = (tagsList) => {
-    const filtered = basicProjectList.filter((project) => {
+    const filtered = getProjects().filter((project) => {
       let result = true;
       tagsList.forEach((tag) => {
         if (!project.tags.includes(tag)) result = false;
