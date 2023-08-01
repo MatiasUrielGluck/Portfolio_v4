@@ -20,4 +20,10 @@ export const light = {
     icon: "#000",
     border: "#000",
   },
+  tag: {
+    text: "#828282",
+    border: "#000",
+    borderHover: "#3531FF",
+    activeText: "#fff",
+  },
 };

@@ -1,11 +1,20 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
-import { Education, Experience, Hobbies, ProfileContainer, Skills } from "./";
+import {
+  Education,
+  Experience,
+  Hobbies,
+  ProfileContainer,
+  Skills,
+  Tags,
+} from "./";
 
 export const Content = () => {
   const theme = useContext(ThemeContext);
+
+  const [selectedTags, setSelectedTags] = useState([]);
 
   return (
     <Container theme={theme}>
@@ -16,6 +25,7 @@ export const Content = () => {
         <Experience />
         <Hobbies />
       </div>
+      <Tags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
     </Container>
   );
 };

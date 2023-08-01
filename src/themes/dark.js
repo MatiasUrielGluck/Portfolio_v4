@@ -20,4 +20,10 @@ export const dark = {
     icon: "#fff",
     border: "#fff",
   },
+  tag: {
+    text: "#a7a7a7",
+    border: "#fff",
+    borderHover: "#ff200f",
+    activeText: "#fff",
+  },
 };

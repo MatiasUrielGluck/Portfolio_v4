@@ -7,3 +7,4 @@ export * from "./Education";
 export * from "./EducationElement";
 export * from "./Experience";
 export * from "./Hobbies";
+export * from "./Tags";

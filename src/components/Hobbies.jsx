@@ -23,7 +23,7 @@ export const Hobbies = () => {
             I've been playing it since I was 9 years old.{" "}
             <a href="https://www.youtube.com/channel/UCKbXB3qWadl9qUKiBF6i8Gw">
               <span>Last concert video here</span>
-              <FontAwesomeIcon icon={faYoutube} />
+              <FontAwesomeIcon icon={faYoutube} className="yt-icon" />
             </a>
           </p>
         </div>
@@ -56,6 +56,10 @@ const Container = styled.div`
     margin-top: 36px;
     width: 60%;
 
+    @media only screen and (width < 568px) {
+      width: 100%;
+    }
+
     img {
       width: 100%;
       border-radius: 8px;
@@ -81,6 +85,12 @@ const Container = styled.div`
 
         span {
           margin-right: 4px;
+        }
+
+        .yt-icon {
+          @media only screen and (width < 568px) {
+            display: none;
+          }
         }
       }
     }
