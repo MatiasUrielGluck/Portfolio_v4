@@ -23,11 +23,11 @@ const Container = styled.div`
   grid-template-columns: 1fr;
   gap: 36px;
 
-  @media only screen and (width > 670px) {
+  @media only screen and (width > 768px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media only screen and (width > 1100px) {
+  @media only screen and (width > 1400px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 `;

@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { getProjects } from "../helpers";
 
-export const useProjects = (tagsList, selectedPage) => {
+export const useProjects = (tagsList, selectedPage, setSelectedPage) => {
   const [basicProjectList, setBasicProjectList] = useState(getProjects());
   const [filteredProjectList, setFilteredProjectList] = useState(getProjects());
   const [projectsList, setProjectsList] = useState([]);
   const [numOfPages, setNumOfPages] = useState();
+  const [cardsPerPage, setCardsPerPage] = useState();
 
   const filterProjectsByTags = (tagsList) => {
     const filtered = basicProjectList.filter((project) => {
@@ -19,48 +20,46 @@ export const useProjects = (tagsList, selectedPage) => {
     setProjectsList(filtered);
   };
 
-  const paginateProjects = (cardsPerPage) => {
+  const paginateProjects = () => {
     if (cardsPerPage === 1) {
       setProjectsList([filteredProjectList[selectedPage - 1]]);
+      setNumOfPages(Math.ceil(filteredProjectList.length / 1));
     } else if (cardsPerPage === 2) {
       setProjectsList(
         filteredProjectList.slice((selectedPage - 1) * 2, selectedPage * 2)
       );
+      setNumOfPages(Math.ceil(filteredProjectList.length / 2));
     } else {
       setProjectsList(
         filteredProjectList.slice((selectedPage - 1) * 3, selectedPage * 3)
       );
+
+      setNumOfPages(Math.ceil(filteredProjectList.length / 3));
     }
   };
 
   const handleResize = () => {
-    console.log(selectedPage);
-    if (window.innerWidth > 1100) {
-      // 3 cards per page
-      // setNumOfPages(Math.ceil(basicProjectList.length / 3));
-      paginateProjects(3);
-    } else if (window.innerWidth > 670) {
-      // 2 cards per page
-      // setNumOfPages(Math.ceil(basicProjectList.length / 2));
-      paginateProjects(2);
+    if (window.innerWidth > 1400) {
+      setCardsPerPage(3);
+    } else if (window.innerWidth > 768) {
+      setCardsPerPage(2);
     } else {
-      // 1  card per page
-      // setNumOfPages(basicProjectList.length);
-      paginateProjects(1);
+      setCardsPerPage(1);
     }
   };
 
   useEffect(() => {
-    handleResize();
-  }, [filteredProjectList]);
+    console.log(cardsPerPage);
+    setSelectedPage(1);
+  }, [cardsPerPage]);
+
+  useEffect(() => {
+    paginateProjects();
+  }, [cardsPerPage, selectedPage, filteredProjectList]);
 
   useEffect(() => {
     filterProjectsByTags(tagsList);
   }, [tagsList]);
-
-  useEffect(() => {
-    handleResize();
-  }, [selectedPage]);
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);

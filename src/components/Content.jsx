@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -19,7 +19,15 @@ export const Content = () => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedPage, setSelectedPage] = useState(1);
 
-  const { projectsList, numOfPages } = useProjects(selectedTags, selectedPage);
+  const { projectsList, numOfPages } = useProjects(
+    selectedTags,
+    selectedPage,
+    setSelectedPage
+  );
+
+  useEffect(() => {
+    setSelectedPage(1);
+  }, [selectedTags]);
 
   return (
     <Container theme={theme}>
