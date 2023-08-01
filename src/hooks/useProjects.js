@@ -48,7 +48,6 @@ export const useProjects = (tagsList, selectedPage, setSelectedPage) => {
   };
 
   useEffect(() => {
-    console.log(cardsPerPage);
     setSelectedPage(1);
   }, [cardsPerPage]);
 
