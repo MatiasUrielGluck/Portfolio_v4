@@ -26,4 +26,10 @@ export const dark = {
     borderHover: "#ff200f",
     activeText: "#fff",
   },
+  btn: {
+    demoText: "#fff",
+    codeText: "#fff",
+    demo: "#0F3460",
+    border: "#ff200f",
+  },
 };

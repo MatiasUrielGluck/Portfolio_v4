@@ -26,4 +26,10 @@ export const light = {
     borderHover: "#3531FF",
     activeText: "#fff",
   },
+  btn: {
+    demoText: "#fff",
+    codeText: "#3531FF",
+    demo: "#3531FF",
+    border: "#3531FF",
+  },
 };

@@ -57,6 +57,7 @@ const AppContainer = styled.div`
     display: grid;
     place-items: center;
     transition: all 0.3s ease;
+    z-index: 2;
 
     &:nth-child(2) {
       top: 63px;
@@ -64,7 +65,7 @@ const AppContainer = styled.div`
       @media only screen and (width > 1200px) {
         top: ${(props) => (props.$isSidebarOpen ? "12px" : "63px")};
         left: ${(props) => (props.$isSidebarOpen ? "63px" : "12px")};
-        z-index: 3;
+        z-index: 11;
       }
     }
   }

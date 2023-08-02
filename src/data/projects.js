@@ -38,7 +38,7 @@ export const projectsList = [
     image: chatapp,
     demoLink: "https://mug-chatapp.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/ChatApp",
-    tags: [1, 2, 3, 4, 5, 6, 7, 8, 11],
+    tags: [1, 2, 3, 4, 5, 6, 7, 8],
   },
   {
     id: 2,
@@ -62,7 +62,7 @@ export const projectsList = [
     image: codenote,
     demoLink: "https://codenote-app.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/CodeNote",
-    tags: [16, 2, 15, 14, 9, 10, 7, 4, 11],
+    tags: [16, 2, 15, 14, 9, 10, 7, 4],
   },
   {
     id: 4,

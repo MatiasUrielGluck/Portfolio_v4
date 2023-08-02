@@ -5,5 +5,5 @@ export const ProjectInfoContainer = styled.div`
   box-shadow: #0000003d 0 3px 8px;
   border-radius: 16px;
   padding: 20px;
-  height: 500px;
+  height: 550px;
 `;

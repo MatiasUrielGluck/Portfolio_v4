@@ -63,6 +63,10 @@ export const Experience = () => {
 };
 
 const Container = styled.div`
+  a {
+    text-decoration: none;
+  }
+
   h2 {
     color: ${(props) => props.theme.text.accent};
     text-align: center;
