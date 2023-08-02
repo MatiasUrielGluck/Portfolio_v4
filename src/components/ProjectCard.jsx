@@ -41,6 +41,17 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
 
+  animation: projectAppear 0.8s forwards;
+
+  @keyframes projectAppear {
+    from {
+      opacity: 0%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+
   .img-container {
     height: 200px;
     display: flex;
