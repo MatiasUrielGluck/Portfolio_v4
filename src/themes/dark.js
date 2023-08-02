@@ -32,4 +32,9 @@ export const dark = {
     demo: "#0F3460",
     border: "#ff200f",
   },
+  pgBtn: {
+    normal: "#fff",
+    midText: "#fff",
+    mid: "#0F3460",
+  },
 };

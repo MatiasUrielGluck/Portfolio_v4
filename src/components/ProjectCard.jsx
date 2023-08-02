@@ -20,17 +20,13 @@ export const ProjectCard = ({ project }) => {
         </div>
         <h2>{project.name}</h2>
         <p className="project-description">{project.description}</p>
-        <div className="actions-container">
-          <div className="action-btn">
-            <a href={project.demoLink} target="_blank">
-              Demo
-            </a>
-          </div>
-          <div className="action-btn">
-            <a href={project.codeLink} target="_blank">
-              Code
-            </a>
-          </div>
+        <div className="actions-container unselectable">
+          <a href={project.demoLink} target="_blank">
+            <div className="action-btn">Demo</div>
+          </a>
+          <a href={project.codeLink} target="_blank">
+            <div className="action-btn">Code</div>
+          </a>
         </div>
       </ProjectInfoContainer>
     </Container>
@@ -87,32 +83,34 @@ const Container = styled.div`
     justify-content: space-evenly;
     align-items: center;
 
-    .action-btn {
-      display: grid;
-      place-items: center;
-      width: 120px;
-      height: 55px;
+    a {
+      text-decoration: none;
+      font-weight: 600;
       border-radius: 16px;
 
-      a {
-        text-decoration: none;
-        font-weight: 600;
-      }
-
       &:first-of-type {
-        background: ${(props) => props.theme.btn.demo};
+        color: ${(props) => props.theme.btn.demoText};
 
-        a {
-          color: ${(props) => props.theme.btn.demoText};
+        .action-btn {
+          background: ${(props) => props.theme.btn.demo};
         }
       }
 
       &:last-of-type {
+        color: ${(props) => props.theme.btn.codeText};
         border: 1px solid ${(props) => props.theme.btn.border};
 
-        a {
-          color: ${(props) => props.theme.btn.codeText};
+        .action-btn {
+          background: transparent;
         }
+      }
+
+      .action-btn {
+        display: grid;
+        place-items: center;
+        width: 120px;
+        height: 55px;
+        border-radius: 16px;
       }
     }
   }

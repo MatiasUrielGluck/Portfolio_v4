@@ -6,6 +6,7 @@ import {
   Education,
   Experience,
   Hobbies,
+  PageController,
   Portfolio,
   ProfileContainer,
   Skills,
@@ -40,8 +41,11 @@ export const Content = () => {
       </div>
       <Tags selectedTags={selectedTags} setSelectedTags={setSelectedTags} />
       <Portfolio projectsList={projectsList} />
-      <button onClick={() => setSelectedPage(selectedPage + 1)}>Sig pag</button>
-      <p>{numOfPages}</p>
+      <PageController
+        actualPage={selectedPage}
+        totalPages={numOfPages}
+        setPage={setSelectedPage}
+      />
     </Container>
   );
 };

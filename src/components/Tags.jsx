@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 import { InfoContainer } from "../styled-components";
 import { tagsList } from "../data/tags";
+import { getProjects } from "../helpers";
 
 export const Tags = ({ selectedTags, setSelectedTags }) => {
   const theme = useContext(ThemeContext);
@@ -17,11 +18,11 @@ export const Tags = ({ selectedTags, setSelectedTags }) => {
       <InfoContainer theme={theme}>
         <h2>
           Projects <span>( </span>
-          {}
+          {getProjects().length}
           <span> )</span>
         </h2>
 
-        <div className="tags-container">
+        <div className="tags-container unselectable">
           {tagsList.map((tag) => (
             <div
               className={`tag ${

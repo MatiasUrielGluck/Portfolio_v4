@@ -50,7 +50,7 @@ export const projectsList = [
     image: portfoliofullstack,
     demoLink: "https://matiasurielgluck.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/portfolio_v3_frontend",
-    tags: [1, 2, 3, 4, 5, 7, 8, 11],
+    tags: [1, 2, 3, 4, 5, 7, 8],
   },
   {
     id: 3,
