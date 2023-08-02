@@ -13,7 +13,7 @@ export const Sidebar = ({ open, closeFn }) => {
 
   return (
     <Container theme={theme} open={open}>
-      <div className="btn">
+      <div className="close-btn">
         <FontAwesomeIcon icon={faClose} onClick={closeFn} size="xl" />
       </div>
       <ul className="unselectable">
@@ -30,7 +30,7 @@ export const Sidebar = ({ open, closeFn }) => {
 };
 
 const Container = styled.div`
-  z-index: 1;
+  z-index: 10;
   display: grid;
   place-items: center;
 
@@ -55,7 +55,7 @@ const Container = styled.div`
     justify-content: start;
   }
 
-  .btn {
+  .close-btn {
     cursor: pointer;
     position: fixed;
     top: 12px;

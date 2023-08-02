@@ -7,6 +7,7 @@ import {
   faGithubSquare,
   faInstagramSquare,
   faLinkedin,
+  faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
 import { useContext } from "react";
 
@@ -18,10 +19,30 @@ export const Contact = () => {
       <InfoContainer theme={theme}>
         <h2>Contact</h2>
         <div className="contact-methods">
-          <FontAwesomeIcon icon={faEnvelope} size="3x" />
-          <FontAwesomeIcon icon={faLinkedin} size="3x" />
-          <FontAwesomeIcon icon={faGithubSquare} size="3x" />
-          <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
+          <a href="mailto:matiasugluck@gmail.com" target="_blank">
+            <FontAwesomeIcon icon={faEnvelope} size="3x" />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/mat%C3%ADas-uriel-gluck/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faLinkedin} size="3x" />
+          </a>
+          <a href="https://github.com/MatiasUrielGluck" target="_blank">
+            <FontAwesomeIcon icon={faGithubSquare} size="3x" />
+          </a>
+          <a
+            href="https://www.youtube.com/channel/UCKbXB3qWadl9qUKiBF6i8Gw"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faYoutubeSquare} size="3x" />
+          </a>
+          <a
+            href="https://www.instagram.com/matias_uriel_gluck/"
+            target="_blank"
+          >
+            <FontAwesomeIcon icon={faInstagramSquare} size="3x" />
+          </a>
         </div>
       </InfoContainer>
     </Container>
@@ -41,7 +62,11 @@ const Container = styled.div`
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
-    gap: 36px;
-    color: ${(props) => props.theme.text.primary};
+    gap: 26px;
+
+    a {
+      text-decoration: none;
+      color: ${(props) => props.theme.text.primary};
+    }
   }
 `;
