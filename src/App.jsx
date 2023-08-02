@@ -9,7 +9,9 @@ import { light } from "./themes";
 
 export const App = () => {
   const [theme, setTheme] = useState(loadTheme());
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(
+    window.innerWidth > 1200 ? true : false
+  );
 
   return (
     <ThemeContext.Provider value={theme}>
