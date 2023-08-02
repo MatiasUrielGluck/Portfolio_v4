@@ -64,6 +64,10 @@ const Container = styled.div`
     align-items: center;
     gap: 26px;
 
+    @media only screen and (width < 390px) {
+      gap: 18px;
+    }
+
     a {
       text-decoration: none;
       color: ${(props) => props.theme.text.primary};
