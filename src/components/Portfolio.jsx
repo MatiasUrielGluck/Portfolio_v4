@@ -8,9 +8,9 @@ export const Portfolio = ({ projectsList }) => {
 
   return (
     <Container theme={theme}>
-      {projectsList.map((project) => (
-        <ProjectCard key={project.id} project={project} />
-      ))}
+      {projectsList.map((project) => {
+        if (project) return <ProjectCard key={project.id} project={project} />;
+      })}
     </Container>
   );
 };
