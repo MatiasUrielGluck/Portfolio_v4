@@ -21,9 +21,13 @@ export const ProjectCard = ({ project }) => {
         <h2>{project.name}</h2>
         <p className="project-description">{project.description}</p>
         <div className="actions-container unselectable">
-          <a href={project.demoLink} target="_blank">
-            <div className="action-btn">Demo</div>
-          </a>
+          {project.demoLink ? (
+            <a href={project.demoLink} target="_blank">
+              <div className="action-btn">Demo</div>
+            </a>
+          ) : (
+            <></>
+          )}
           <a href={project.codeLink} target="_blank">
             <div className="action-btn">Code</div>
           </a>

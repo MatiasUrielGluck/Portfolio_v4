@@ -36,7 +36,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1677987349/portfolio/igffehvgaklyjctkzikc.png",
     image: chatapp,
-    demoLink: "https://mug-chatapp.netlify.app/",
+    // demoLink: "https://mug-chatapp.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/ChatApp",
     tags: [1, 2, 3, 4, 5, 6, 7, 8],
   },
@@ -48,7 +48,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625903/portfolio/uqt3eyxcpw0uj8eqqlcz.png",
     image: portfoliofullstack,
-    demoLink: "https://matiasurielgluck.netlify.app/",
+    // demoLink: "https://matiasurielgluck.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/portfolio_v3_frontend",
     tags: [1, 2, 3, 4, 5, 7, 8],
   },
@@ -60,7 +60,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625585/portfolio/oasrmdfw5rt9toiklity.png",
     image: codenote,
-    demoLink: "https://codenote-app.netlify.app/",
+    // demoLink: "https://codenote-app.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/CodeNote",
     tags: [16, 2, 15, 14, 9, 10, 7, 4],
   },
@@ -72,7 +72,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625639/portfolio/bwsst40aay15m0mej1ed.png",
     image: noteapp,
-    demoLink: "https://note-app-matiasurielgluck.netlify.app/",
+    // demoLink: "https://note-app-matiasurielgluck.netlify.app/",
     codeLink: "https://github.com/MatiasUrielGluck/Notes-App-Vue",
     tags: [16, 2, 3, 4, 7, 9, 10, 11],
   },
@@ -84,7 +84,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625689/portfolio/tymmjicba32ledxs1hyq.png",
     image: gluckpianos,
-    demoLink: "https://gluck-pianos.herokuapp.com/",
+    // demoLink: "https://gluck-pianos.herokuapp.com/",
     codeLink: "https://github.com/MatiasUrielGluck/Gluck-Pianos",
     tags: [9, 10, 11, 12, 13, 3, 4],
   },
@@ -190,7 +190,7 @@ export const projectsList = [
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1666626384/portfolio/v6exrnxfpgmudnkk49h4.png",
     image: sudoku,
-    demoLink: "https://github.com/MatiasUrielGluck/Sudoku-Python",
+    // demoLink: "https://github.com/MatiasUrielGluck/Sudoku-Python",
     codeLink: "https://github.com/MatiasUrielGluck/Sudoku-Python",
 
     tags: [12],
