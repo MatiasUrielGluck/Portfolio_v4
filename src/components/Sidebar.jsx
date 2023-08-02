@@ -9,6 +9,10 @@ export const Sidebar = ({ open, closeFn }) => {
 
   const scrollToElementById = (id) => {
     document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    if (window.innerWidth < 1201) {
+      // Close the sidebar
+      closeFn();
+    }
   };
 
   return (
