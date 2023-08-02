@@ -15,7 +15,7 @@ export const Hobbies = () => {
       <InfoContainer theme={theme}>
         <h2>Hobbies</h2>
 
-        <div className="hobbies">
+        <div className="hobby">
           <img src={pianoImg} alt="matias uriel gluck piano" />
 
           <strong>Piano</strong>
