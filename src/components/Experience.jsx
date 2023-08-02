@@ -12,7 +12,7 @@ export const Experience = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id="experience">
       <FullWidthInfoContainer theme={theme}>
         <h2>Experience</h2>
 

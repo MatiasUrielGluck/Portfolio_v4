@@ -7,26 +7,30 @@ import { faClose } from "@fortawesome/free-solid-svg-icons";
 export const Sidebar = ({ open, closeFn }) => {
   const theme = useContext(ThemeContext);
 
+  const scrollToElementById = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <Container theme={theme} open={open}>
       <div className="btn">
         <FontAwesomeIcon icon={faClose} onClick={closeFn} size="xl" />
       </div>
-      <ul>
-        <li>About me</li>
-        <li>Skills</li>
-        <li>Education</li>
-        <li>Experience</li>
-        <li>Hobbies</li>
-        <li>Portfolio</li>
-        <li>Contact</li>
+      <ul className="unselectable">
+        <li onClick={() => scrollToElementById("profile")}>About me</li>
+        <li onClick={() => scrollToElementById("skills")}>Skills</li>
+        <li onClick={() => scrollToElementById("education")}>Education</li>
+        <li onClick={() => scrollToElementById("experience")}>Experience</li>
+        <li onClick={() => scrollToElementById("hobbies")}>Hobbies</li>
+        <li onClick={() => scrollToElementById("portfolio")}>Portfolio</li>
+        <li onClick={() => scrollToElementById("contact")}>Contact</li>
       </ul>
     </Container>
   );
 };
 
 const Container = styled.div`
-  z-index: 10;
+  z-index: 1;
   display: grid;
   place-items: center;
 

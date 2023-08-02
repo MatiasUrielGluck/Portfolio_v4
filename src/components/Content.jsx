@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 import { ThemeContext } from "../context/ThemeContext";
 
 import {
+  Contact,
   Education,
   Experience,
   Hobbies,
@@ -46,6 +47,7 @@ export const Content = () => {
         totalPages={numOfPages}
         setPage={setSelectedPage}
       />
+      <Contact />
     </Container>
   );
 };

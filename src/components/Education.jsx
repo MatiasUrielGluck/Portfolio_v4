@@ -11,7 +11,7 @@ export const Education = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id="education">
       <InfoContainer theme={theme}>
         <h2>Education</h2>
 
@@ -51,9 +51,9 @@ const Container = styled.div`
       display: grid;
       grid-template-columns: 1fr;
       gap: 24px;
-      
+
       span {
-        color: ${props => props.theme.text.primary};
+        color: ${(props) => props.theme.text.primary};
       }
 
       @media only screen and (width > 975px) {

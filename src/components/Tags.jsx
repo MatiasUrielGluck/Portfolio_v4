@@ -14,7 +14,7 @@ export const Tags = ({ selectedTags, setSelectedTags }) => {
   };
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id="portfolio">
       <InfoContainer theme={theme}>
         <h2>
           Projects <span>( </span>

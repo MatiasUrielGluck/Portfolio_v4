@@ -13,7 +13,7 @@ export const ProfileContainer = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <InfoContainer theme={theme}>
+    <InfoContainer theme={theme} id="profile">
       <Container theme={theme}>
         <div className="profile--img-container">
           <img src={profileImage} alt="profile image matias uriel gluck" />

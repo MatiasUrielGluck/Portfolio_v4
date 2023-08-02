@@ -11,3 +11,4 @@ export * from "./Tags";
 export * from "./Portfolio";
 export * from "./ProjectCard";
 export * from "./PageController";
+export * from "./Contact";

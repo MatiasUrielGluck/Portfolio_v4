@@ -11,7 +11,7 @@ export const Hobbies = () => {
   const theme = useContext(ThemeContext);
 
   return (
-    <Container theme={theme}>
+    <Container theme={theme} id="hobbies">
       <InfoContainer theme={theme}>
         <h2>Hobbies</h2>
 
