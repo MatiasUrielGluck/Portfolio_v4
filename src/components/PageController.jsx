@@ -8,7 +8,9 @@ export const PageController = ({ actualPage, totalPages, setPage }) => {
   const theme = useContext(ThemeContext);
 
   const onChangePage = (position) => {
-    if (actualPage + position < 1 || actualPage + position > totalPages) return;
+    if (actualPage + position > totalPages) return setPage(1);
+    if (actualPage + position < 1) return setPage(totalPages);
+    // if (actualPage + position < 1 || actualPage + position > totalPages) return;
     setPage(actualPage + position);
   };
 
