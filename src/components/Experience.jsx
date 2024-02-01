@@ -3,6 +3,7 @@ import { FullWidthInfoContainer } from "../styled-components";
 import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import abbLogo from "../assets/images/abb.png";
+import global66Logo from "../assets/images/global66.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import { faStethoscope } from "@fortawesome/free-solid-svg-icons";
@@ -16,12 +17,22 @@ export const Experience = () => {
       <FullWidthInfoContainer theme={theme}>
         <h2>Experience</h2>
 
-        <div className="abb">
-          <div className="abb-desc">
-            <strong>Fullstack Developer Intern</strong>
-            <p>ABB, since January 2023</p>
+        <div className="exp">
+          <div className="exp-desc">
+            <strong>Frontend Developer</strong>
+            <p>Since Nov 2023</p>
           </div>
-          <div className="abb-img">
+          <div className="exp-img global66">
+            <img src={global66Logo} alt="global66 matias uriel gluck" />
+          </div>
+        </div>
+
+        <div className="exp">
+          <div className="exp-desc">
+            <strong>Full Stack Developer Intern</strong>
+            <p>Jan 2023 - Nov 2023</p>
+          </div>
+          <div className="exp-img">
             <img src={abbLogo} alt="abb matias uriel gluck" />
           </div>
         </div>
@@ -73,15 +84,26 @@ const Container = styled.div`
     font-weight: 500;
   }
 
-  .abb {
+  .exp {
     padding: 36px 0;
     display: grid;
     grid-template-columns: 1fr 1fr;
     place-items: center;
     border-bottom: 1px solid ${(props) => props.theme.text.soft};
 
-    .abb-desc {
+    @media (width < 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .exp-desc {
       justify-self: start;
+
+      @media (width < 768px) {
+        order: 1;
+        justify-self: center;
+        text-align: center;
+        margin-top: 2px;
+      }
 
       strong,
       p {
@@ -98,10 +120,17 @@ const Container = styled.div`
       }
     }
 
-    .abb-img {
+    .exp-img {
       img {
         width: 100%;
         max-width: 100px;
+      }
+    }
+
+    .global66 {
+      img {
+        width: 100%;
+        max-width: 140px;
       }
     }
   }
