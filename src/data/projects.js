@@ -26,19 +26,44 @@ import sudoku from "../assets/portfolio/sudoku.png";
 import teamspage from "../assets/portfolio/teamspage.png";
 import textilgluck from "../assets/portfolio/textilgluck.png";
 import todovue from "../assets/portfolio/todovue.png";
+import tourapp from "../assets/portfolio/tourapp.png";
 
 export const projectsList = [
   {
-    id: 1,
-    name: "Chat App",
+    id: 0,
+    name: "¡Encontrá tu Guía!",
     description:
-      "Created using React, React Router, Redux and Axios for the frontend. The backend is built using Node.js, Express.js, Socket.io, MySQL and Sequelize.",
+      "Created using Vue 3, TypeScript, Pinia and Quasar for the frontend. The backend is built using Java Spring Boot and MySQL.",
     imageURL:
       "https://res.cloudinary.com/dkiml5h06/image/upload/v1677987349/portfolio/igffehvgaklyjctkzikc.png",
-    image: chatapp,
+    image: tourapp,
     // demoLink: "https://mug-chatapp.netlify.app/",
-    codeLink: "https://github.com/MatiasUrielGluck/ChatApp",
-    tags: [1, 2, 3, 4, 5, 6, 7, 8],
+    codeLink: "https://github.com/MatiasUrielGluck/be-tourapp",
+    tags: [16, 20, 18, 19, 3, 4],
+  },
+  {
+    id: 6,
+    name: "Textil Gluck",
+    description:
+      "Landing page for a real business dedicated to the sale of textiles.",
+    imageURL:
+      "https://res.cloudinary.com/dkiml5h06/image/upload/v1675302249/portfolio/fb28gg50eejhdaqwawll.png",
+    image: textilgluck,
+    demoLink: "https://textilgluck.netlify.app/",
+    codeLink: "https://github.com/MatiasUrielGluck/textil-gluck",
+    tags: [1, 9, 10, 11],
+  },
+  {
+    id: 3,
+    name: "Codenote",
+    description:
+      "Note app for programmers. Built using the MEVN Stack technologies.",
+    imageURL:
+      "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625585/portfolio/oasrmdfw5rt9toiklity.png",
+    image: codenote,
+    // demoLink: "https://codenote-app.netlify.app/",
+    codeLink: "https://github.com/MatiasUrielGluck/CodeNote",
+    tags: [16, 2, 15, 14, 9, 10, 7, 4],
   },
   {
     id: 2,
@@ -53,16 +78,16 @@ export const projectsList = [
     tags: [1, 2, 3, 4, 5, 7, 8],
   },
   {
-    id: 3,
-    name: "Codenote",
+    id: 1,
+    name: "Chat App",
     description:
-      "Note app for programmers. Built using the MEVN Stack technologies.",
+      "Created using React, React Router, Redux and Axios for the frontend. The backend is built using Node.js, Express.js, Socket.io, MySQL and Sequelize.",
     imageURL:
-      "https://res.cloudinary.com/dkiml5h06/image/upload/v1666625585/portfolio/oasrmdfw5rt9toiklity.png",
-    image: codenote,
-    // demoLink: "https://codenote-app.netlify.app/",
-    codeLink: "https://github.com/MatiasUrielGluck/CodeNote",
-    tags: [16, 2, 15, 14, 9, 10, 7, 4],
+      "https://res.cloudinary.com/dkiml5h06/image/upload/v1677987349/portfolio/igffehvgaklyjctkzikc.png",
+    image: chatapp,
+    // demoLink: "https://mug-chatapp.netlify.app/",
+    codeLink: "https://github.com/MatiasUrielGluck/ChatApp",
+    tags: [1, 2, 3, 4, 5, 6, 7, 8],
   },
   {
     id: 4,
@@ -87,18 +112,6 @@ export const projectsList = [
     // demoLink: "https://gluck-pianos.herokuapp.com/",
     codeLink: "https://github.com/MatiasUrielGluck/Gluck-Pianos",
     tags: [9, 10, 11, 12, 13, 3, 4],
-  },
-  {
-    id: 6,
-    name: "Textil Gluck",
-    description:
-      "Landing page for a real business dedicated to the sale of textiles.",
-    imageURL:
-      "https://res.cloudinary.com/dkiml5h06/image/upload/v1675302249/portfolio/fb28gg50eejhdaqwawll.png",
-    image: textilgluck,
-    demoLink: "https://textilgluck.netlify.app/",
-    codeLink: "https://github.com/MatiasUrielGluck/textil-gluck",
-    tags: [1, 9, 10, 11],
   },
   {
     id: 7,

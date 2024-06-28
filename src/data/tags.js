@@ -4,16 +4,32 @@
 
 export const tagsList = [
   {
+    id: 16,
+    name: "Vue",
+  },
+  {
+    id: 20,
+    name: "TypeScript",
+  },
+  {
     id: 1,
     name: "React",
   },
   {
-    id: 2,
-    name: "Node",
+    id: 18,
+    name: "Java",
+  },
+  {
+    id: 19,
+    name: "Spring Boot",
   },
   {
     id: 3,
     name: "MySQL",
+  },
+  {
+    id: 2,
+    name: "Node",
   },
   {
     id: 4,
@@ -62,10 +78,6 @@ export const tagsList = [
   {
     id: 15,
     name: "Mongo",
-  },
-  {
-    id: 16,
-    name: "Vue",
   },
   {
     id: 17,
