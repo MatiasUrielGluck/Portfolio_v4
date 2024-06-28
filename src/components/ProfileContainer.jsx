@@ -23,7 +23,7 @@ export const ProfileContainer = () => {
             <h2>Matías Uriel Gluck</h2>
             <p>
               <span className="coding-decorators">&#60;</span>
-              Full Stack Web Developer
+              Full Stack Developer
               <span className="coding-decorators">&#47;&#62;</span>
             </p>
             <a href="mailto:matiasugluck@gmail.com">
@@ -38,10 +38,9 @@ export const ProfileContainer = () => {
           </div>
           <div className="profile--info--large-container">
             <p>
-              I am a software engenieering student and Full Stack Developer with
-              an entrepreneurial spirit. Organized, responsible and well
-              predisposed for teamwork. I took courses and projects in the area
-              of web development.
+              I am a software engineering student and Full Stack Developer with
+              an entrepreneurial spirit.<br /><br />
+              I have experience leading projects under pressure as well as developing the frontend and backend of Web and Mobile applications.
             </p>
           </div>
         </div>
