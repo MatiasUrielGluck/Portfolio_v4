@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 import abbLogo from "../assets/images/abb.png";
 import global66Logo from "../assets/images/global66.png";
+import mercadolibreLogo from "../assets/images/mercadolibre.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWindows } from "@fortawesome/free-brands-svg-icons";
 import { faStethoscope } from "@fortawesome/free-solid-svg-icons";
@@ -19,8 +20,20 @@ export const Experience = () => {
 
         <div className="exp">
           <div className="exp-desc">
+            <strong>Software Engineer</strong>
+            <p style={{ fontWeight: '500',  }}>Mercado Libre</p>
+            <p>Since Feb 2025</p>
+          </div>
+          <div className="exp-img global66">
+            <img src={mercadolibreLogo} alt="mercadolibre matias uriel gluck" />
+          </div>
+        </div>
+
+        <div className="exp">
+          <div className="exp-desc">
             <strong>Frontend Developer</strong>
-            <p>Since Nov 2023</p>
+            <p style={{ fontWeight: '500' }}>Global66</p>
+            <p>Nov 2023 - Jan 2025</p>
           </div>
           <div className="exp-img global66">
             <img src={global66Logo} alt="global66 matias uriel gluck" />
@@ -30,6 +43,7 @@ export const Experience = () => {
         <div className="exp">
           <div className="exp-desc">
             <strong>Full Stack Developer Intern</strong>
+            <p style={{ fontWeight: '500' }}>ABB</p>
             <p>Jan 2023 - Nov 2023</p>
           </div>
           <div className="exp-img">
