@@ -42,7 +42,7 @@ export const Experience = () => {
 
         <div className="exp">
           <div className="exp-desc">
-            <strong>Full Stack Developer Intern</strong>
+            <strong>Full Stack Developer</strong>
             <p style={{ fontWeight: '500' }}>ABB</p>
             <p>Jan 2023 - Nov 2023</p>
           </div>
